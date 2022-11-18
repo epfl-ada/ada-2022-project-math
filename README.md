@@ -5,6 +5,9 @@
 National system of government by definition is the monopolisation of legitimate violence according to Maximilian Weber. How would the pandemic affect the monopolisation which is authorised by citizens? As we observe, different regions in the world have taken different measures to cope with covid which possess distinct styles in terms of culture, geography and so on.  It offers an opportunity to investigate the threshold of government enforcement among the public and vice versa. Here we try to analyse the inter-country difference of COVID restriction measure and the corresponding public reaction reflected through mobility data shift. In order to isolate the effect of government on mobility, we plan to apply feature engineering and machine learning methods to analyse the driving force behind the government's public power. Furthermore,extra datasets need to be implemented to get insights with respect to geographical, cultural, economic factors that formulate governments’ power.
 
 ## Research questions
+1. Which country has the most executive government for pandemic control? 
+2. What is the relationship between government execution and the effectiveness of implementation? 
+3. What is the difference between the government's execution of pandemic control and the government's overall execution?
 
 ## Proposed Additional Dataset
 1. Government effectiveness - Country rankings  
