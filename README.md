@@ -21,14 +21,14 @@ The government's restrictions on public activities reflect the government execut
 ## Methods
 Two ranking methods will be used, the non-machine learning method and the machine learning method.  
 
-For ranking the government execution by non-machine learning method, the Multi-Criteria Analysis method could be used. Three groups of criteria, including response speed, implementation speed and implementation strength, are generated. Response speed refers to the time difference between the first death and the release of the school closure policy, which are found in interventions.csv. Implementation speed is the time difference between the release of the public events banned policy and the intersection of the rapidly declining phase and the stable phase in the data from activity frequency. Implementation strength can be expressed in terms of the frequency of occurrence of various activities in the post-reduction stabilisation phase. The final score can be obtained by normalising and weighting the average of each factor, which is somewhat representative of the government execution.
+1. For ranking the government execution by non-machine learning method, the Multi-Criteria Analysis method could be used. Three groups of criteria, including response speed, implementation speed and implementation strength, are generated. Response speed refers to the time difference between the first death and the release of the school closure policy, which are found in interventions.csv. Implementation speed is the time difference between the release of the public events banned policy and the intersection of the rapidly declining phase and the stable phase in the data from activity frequency. Implementation strength can be expressed in terms of the frequency of occurrence of various activities in the post-reduction stabilisation phase. The final score can be obtained by normalising and weighting the average of each factor, which is somewhat representative of the government execution.
 
-We propose to use the supervised machine learning, where will have 3 features relevant to three groups of criteria. Also additionally as features we can use categorical variable such as continent. At the same time we propouse to assign labels according to rate death cases / population, using defenition of government  as the protector of citizens we can assign 0 for country with signficant rate of death and 1 for not. Evaluation significance of rate will do using t-test and its p-value. In nutshell, we extract features: 
-1. Continuous vaibales :
+2. For machine learning method, we propose to use the supervised machine learning, where will have 3 features relevant to three groups of criteria mentioned above. Also additionally as features we can use categorical variable such as continent. At the same time we propouse to assign labels according to rate death cases / population, using defenition of government  as the protector of citizens we can assign 0 for country with signficant rate of death and 1 for not. Evaluation significance of rate will do using t-test and its p-value. In nutshell, we extract features: 
+1) Continuous vaibales :
     - including response speed
     - implementation speed
     - implementation strength
-2. Categorical variables :
+2) Categorical variables :
     - continent
  
 We will use following labels:  
@@ -40,6 +40,8 @@ Due to limited data and imbalance data according to categorical variable we supp
 Based on it we can use logistic regression due to binary cleassification problem and with regulization for controlling loss function for adequate evaluation during the training model. For searching wights we will use SGD with mini-butch. As a loss function was chosen Negative Log-Likelihood Loss with regularisation composition and as the logistic function was chosen sigmoid function.   
 
 For proving independence of features we suppose to use Spearman Rank Correlation for continuous variables.
+
+By comparing the classification results of non-machine learning and machine learning, the advantages and disadvantages of the two methods are discussed.
 
 ## Proposed timeline
 - 19/11/2022-25/11/2022 - Additional dataset collection and preprocessing
